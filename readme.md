@@ -1,0 +1,1 @@
+# A collection of codes made from Python.
