@@ -1,1 +1,1 @@
-A collection of codes made made in Python. 
+A collection of codes made made in Python.
