@@ -11,7 +11,7 @@ display = []
 for _ in range(word_length):
     display += "_"
 
-
+# Create a variable and name it negative. The code will loop until it becomes positive. If it becomes positive, the game is over, either lost (not done yet) or won.
 end_game = False
 while not end_game:
     guess = input("Guess a letter: ").lower()
