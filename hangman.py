@@ -1,5 +1,6 @@
 import random
 
+
 stages = ['''
   +---+
   |   |
@@ -57,8 +58,7 @@ stages = ['''
 =========
 ''']
 
-print
-('''88
+print('''88
 88
 88
 88,dPPYba,  ,adPPYYba, 8b,dPPYba,   ,adPPYb,d8 88,dPYba,,adPYba,  ,adPPYYba,  8b,dPPYba,
@@ -67,8 +67,7 @@ print
 88       88 88,    ,88 88       88 "8a,   ,d88 88      88      88 88,    ,88  88       88
 88       88 `"8bbdP"Y8 88       88  `"YbbdP"Y8 88      88      88 `"8bbdP"Y8  88       88
                                     aa,    ,88
-                                     "Y8bbdP"
-''')
+                                     "Y8bbdP"''')
 
 live = 6
 end_game = False
@@ -77,7 +76,6 @@ word_list = ["aback", "abaft", "abandoned", "abashed", "aberrant", "abhorrent", 
 chosen_word = random.choice(word_list)
 word_length = len(chosen_word)
 print(f'The solution is {chosen_word}.')
-print(len(word_list))
 
 
 display = []
@@ -87,20 +85,28 @@ for _ in range(word_length):
 
 while not end_game:
     guess = input("Guess a letter: ").lower()
+    print("\033[H\033[J", end="")
+    if guess in display:
+        print(f"You have already guessed {guess}")
+
     for position in range(word_length):
         letter = chosen_word[position]
-        # print(
-        #     f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
         if letter == guess:
             display[position] = letter
+
     if guess not in chosen_word:
         live -= 1
+        print(
+            f"You guessed {guess}. This is not in the word. You lose a life!")
         print(stages[live])
+
         if live == 0:
             end_game = True
             print('You lose.')
+            print(f'The correct word was {chosen_word}.')
 
-    print(f"{' '.join(display)}")
+    if not live == 0:
+        print(f"{' '.join(display)}")
 
     if '_' not in display:
         end_game = True
