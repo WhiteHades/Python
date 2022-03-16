@@ -20,6 +20,7 @@ logo = '''
                        .-------------.
                       /_______________\\
 '''
+print(logo)
 bids = {}
 bidding_finished = False
 
