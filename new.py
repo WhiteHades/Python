@@ -40,3 +40,5 @@ OPERATIONS = {
     '/': divide,
     '*': multiply
 }
+
+new = 'nick'
