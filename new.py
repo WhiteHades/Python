@@ -42,3 +42,4 @@ OPERATIONS = {
 }
 
 new = 'nick'
+new2 = 'fj'
