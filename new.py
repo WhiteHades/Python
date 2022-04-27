@@ -40,7 +40,3 @@ OPERATIONS = {
     '/': divide,
     '*': multiply
 }
-
-new = 'nick'
-new2 = 'fj'
-new3 = 'fs'
