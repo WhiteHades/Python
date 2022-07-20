@@ -1,3 +1,0 @@
-name = "JawOcean"
-
-print(name)
